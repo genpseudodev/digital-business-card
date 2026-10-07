@@ -23,16 +23,19 @@
             padding: 20px;
         }
 
-        /* Container simulating a mobile phone viewport */
-        .phone-container {
-            width: 100%;
-            max-width: 412px;
-            background-color: #000000;
-            border-radius: 40px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
-            position: relative;
-            border: 8px solid #1a1a1a;
+        html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.phone-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  box-sizing: border-box;
+}
         }
 
         /* Top Header Section (Dark Background) */
