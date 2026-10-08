@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Digital Business Card</title>
+  <title>Genesis Deang - Digital Business Card</title>
   <style>
-    /* 1. Global Reset: Clears default margins & ensures full-screen background */
+    /* Global Reset: Clears browser margins & fills viewport screen */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -20,87 +20,200 @@
       color: #ffffff;
     }
 
-    /* 2. Full-Screen Main Container (No Phone Frame) */
+    /* Edge-to-Edge Container (Completely borderless, no fake phone outline) */
     .phone-container {
       width: 100%;
       min-height: 100vh;
       background-color: #000000;
-      padding: 40px 20px;
-      
-      /* Vertically and horizontally centers the entire profile card content */
+      padding: 40px 24px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
-    /* 3. Card Content Wrapper: Aligns items vertically in the absolute middle */
+    /* Centers entire block and content items vertically */
     .profile-card {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
       width: 100%;
-      max-width: 350px; /* Keeps the content neatly contained on wider screens */
+      max-width: 360px; 
     }
 
-    /* 4. Profile Picture Styles */
-    .profile-pic {
-      width: 120px;
-      height: 120px;
+    /* Profile Initials/Avatar Placeholder */
+    .profile-avatar {
+      width: 110px;
+      height: 110px;
       border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #ffffff;
-      margin-bottom: 20px;
-      background-color: #333; /* Placeholder background color */
+      background: linear-gradient(135deg, #2c2c2c, #111111);
+      border: 2px solid #ffffff;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 36px;
+      font-weight: 600;
+      color: #ffffff;
+      letter-spacing: 1px;
     }
 
-    /* 5. Full Name Styles */
+    /* Primary Profile Details */
     .profile-name {
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 700;
       letter-spacing: -0.5px;
-      margin-bottom: 30px;
+      margin-bottom: 4px;
     }
 
-    /* 6. "Add Contact" Button Styles */
+    .profile-title {
+      font-size: 16px;
+      font-weight: 400;
+      color: #aaaaaa;
+      margin-bottom: 2px;
+    }
+
+    .profile-company {
+      font-size: 15px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 28px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* CTA Add Contact Button */
     .add-contact-btn {
       display: inline-block;
       width: 100%;
-      max-width: 240px;
-      padding: 14px 24px;
+      padding: 15px 24px;
       background-color: #ffffff;
       color: #000000;
       text-decoration: none;
       font-weight: 600;
       font-size: 16px;
       border-radius: 30px;
+      margin-bottom: 32px;
       transition: transform 0.2s ease, opacity 0.2s ease;
-      cursor: pointer;
       border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
     }
 
-    /* Subtle hover/active effect for the button */
     .add-contact-btn:active {
       transform: scale(0.97);
-      opacity: 0.9;
+      opacity: 0.95;
+    }
+
+    /* Quick Action Contact Links */
+    .contact-links-list {
+      width: 100%;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact-item-link {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      padding: 14px 20px;
+      background-color: #121212;
+      border: 1px solid #222222;
+      border-radius: 12px;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 14px;
+      transition: background-color 0.2s ease;
+      text-align: left;
+    }
+
+    .contact-item-link:active {
+      background-color: #1c1c1c;
+    }
+
+    /* Inline text labels inside contact rows */
+    .link-label {
+      font-weight: 500;
+      color: #888888;
+      width: 85px;
+      flex-shrink: 0;
+    }
+
+    .link-value {
+      font-weight: 400;
+      color: #ffffff;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* Address multi-line override styling */
+    .contact-item-link.address-layout {
+      align-items: flex-start;
+    }
+    
+    .contact-item-link.address-layout .link-value {
+      white-space: normal;
+      line-height: 1.4;
+      color: #3897f0; /* Distinct interactive blue for map link */
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
 
-  <!-- The main container that stretches edge-to-edge across your actual screen -->
+  <!-- Full-viewport container layout -->
   <main class="phone-container">
     
-    <!-- Centered profile block -->
+    
     <div class="profile-card">
       
-      <!-- Replace 'profile-placeholder.jpg' with your actual image path or URL -->
-      <img src="profile-placeholder.jpg" alt="Profile Picture" class="profile-pic">
+      <!-- Clean Initials Avatar (Can change to <img src="URL"> later if you have an image link) -->
+      <div class="profile-avatar">GD</div>
       
-      <h1 class="profile-name">Alex Morgan</h1>
+      <h1 class="profile-name">Genesis Deang</h1>
+      <p class="profile-title">Sales Coordinator</p>
+      <p class="profile-company">Al Huzaifa Furniture</p>
       
-      <!-- Replace the '#' with your actual .vcf contact file link or action -->
-      <a href="#" class="add-contact-btn">Add Contact</a>
+      <!-- Primary Save Action File Callout -->
+      <a href="vcard.vcf" class="add-contact-btn">Add Contact</a>
+      
+      <!-- Tap to Action Directory Links -->
+      <ul class="contact-links-list">
+        
+        <li>
+          <a href="tel:+971588393108" class="contact-item-link">
+            <span class="link-label">Mobile</span>
+            <span class="link-value">058 839 3108</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="https://wa.me" target="_blank" class="contact-item-link">
+            <span class="link-label">WhatsApp</span>
+            <span class="link-value">058 839 3108</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="mailto:genesis@huzaifa1.ae" class="contact-item-link">
+            <span class="link-label">Email</span>
+            <span class="link-value">genesis@huzaifa1.ae</span>
+          </a>
+        </li>
+
+        <li>
+          <!-- Verified Live Showroom Location Drop on Google Maps -->
+          <a href="https://maps.app.goo.gl/DULwRN6WKXPS844z7" target="_blank" class="contact-item-link address-layout">
+            <span class="link-label">Address</span>
+            <span class="link-value">Zomorrodah Building - Block B, Umm Hurair Rd - near Karama post office - Al Karama - Dubai</span>
+          </a>
+        </li>
+
+      </ul>
       
     </div>
 
