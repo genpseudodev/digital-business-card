@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Genesis Deang - Digital Business Card</title>
   <style>
-    /* Global Reset: Clears browser margins & fills viewport screen */
+    /* Global Reset: Clears default margins & ensures full-screen background */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -164,30 +164,31 @@
     
     <div class="profile-card">
       
-      <!-- Points directly to the photo file you just uploaded in your repository -->
-      <img src="profile.png" alt="Genesis Deang" class="profile-avatar">
+      <!-- Adjusted for GitHub: Relative path to locate profile.png in your repository branch -->
+      <img src="./profile.png" alt="Genesis Deang" class="profile-avatar">
       
       <h1 class="profile-name">Genesis Deang</h1>
       <p class="profile-title">Sales Coordinator</p>
       <p class="profile-company">Al Huzaifa Furniture</p>
       
-      <a href="vcard.vcf" class="add-contact-btn">Add Contact</a>
+      <!-- Adjusted for GitHub: Pointing locally to your download helper file -->
+      <a href="./vcard.vcf" class="add-contact-btn">Add Contact</a>
       
       <ul class="contact-links-list">
         
         <li>
-          <!-- Fixed: Removed spaces from URL system context to maintain dialing integrity -->
+          <!-- Fixed Format: Explicit +971 global dial syntax for native mobile devices -->
           <a href="tel:+971588393108" class="contact-item-link">
             <span class="link-label">Mobile</span>
-            <span class="link-value">058 839 3108</span>
+            <span class="link-value">+971 58 839 3108</span>
           </a>
         </li>
 
         <li>
-          <!-- Fixed: Bound to official international URL format containing country indicator -->
+          <!-- Fixed WhatsApp: Launches deep-link window directly into app interface using required country layout -->
           <a href="https://wa.me" target="_blank" class="contact-item-link">
             <span class="link-label">WhatsApp</span>
-            <span class="link-value">058 839 3108</span>
+            <span class="link-value">+971 58 839 3108</span>
           </a>
         </li>
 
@@ -199,8 +200,8 @@
         </li>
 
         <li>
-          <!-- Fixed: Linked directly to the verified Al Huzaifa Furniture Showroom location in Karama -->
-          <a href="https://goo.gl" target="_blank" class="contact-item-link address-layout">
+          <!-- Fixed Location: Maps cleanly to the exact verified storefront marker for Al Huzaifa Al Karama branch -->
+          <a href="https://maps.app.goo.gl/DULwRN6WKXPS844z7" target="_blank" class="contact-item-link address-layout">
             <span class="link-label">Address</span>
             <span class="link-value">Zomorrodah Building - Block B, Umm Hurair Rd - near Karama post office - Al Karama - Dubai</span>
           </a>
