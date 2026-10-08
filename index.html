@@ -1,32 +1,110 @@
-/* 1. Global Reset: Removes all default browser margins and fills the screen */
-* {
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Business Card</title>
+  <style>
+    /* 1. Global Reset: Clears default margins & ensures full-screen background */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000000;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-}
+    html, body {
+      width: 100%;
+      height: 100%;
+      background-color: #000000;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: #ffffff;
+    }
 
-/* 2. Full-Screen Container: Replaces your old mobile viewport code */
-.phone-container {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #000000;
-  padding: 20px; /* Optional: adds a neat spacing around your card content */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  
-  /* CRITICAL FIXES: 
-     - Removed max-width: 412px (allows full width)
-     - Removed border: 8px solid #1a1a1a (deletes the fake phone frame)
-     - Removed border-radius: 40px (deletes the rounded phone corners)
-     - Removed box-shadow (deletes the floating phone shadow)
-  */
-}
+    /* 2. Full-Screen Main Container (No Phone Frame) */
+    .phone-container {
+      width: 100%;
+      min-height: 100vh;
+      background-color: #000000;
+      padding: 40px 20px;
+      
+      /* Vertically and horizontally centers the entire profile card content */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    /* 3. Card Content Wrapper: Aligns items vertically in the absolute middle */
+    .profile-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      max-width: 350px; /* Keeps the content neatly contained on wider screens */
+    }
+
+    /* 4. Profile Picture Styles */
+    .profile-pic {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ffffff;
+      margin-bottom: 20px;
+      background-color: #333; /* Placeholder background color */
+    }
+
+    /* 5. Full Name Styles */
+    .profile-name {
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      margin-bottom: 30px;
+    }
+
+    /* 6. "Add Contact" Button Styles */
+    .add-contact-btn {
+      display: inline-block;
+      width: 100%;
+      max-width: 240px;
+      padding: 14px 24px;
+      background-color: #ffffff;
+      color: #000000;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      border-radius: 30px;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    /* Subtle hover/active effect for the button */
+    .add-contact-btn:active {
+      transform: scale(0.97);
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- The main container that stretches edge-to-edge across your actual screen -->
+  <main class="phone-container">
+    
+    <!-- Centered profile block -->
+    <div class="profile-card">
+      
+      <!-- Replace 'profile-placeholder.jpg' with your actual image path or URL -->
+      <img src="profile-placeholder.jpg" alt="Profile Picture" class="profile-pic">
+      
+      <h1 class="profile-name">Alex Morgan</h1>
+      
+      <!-- Replace the '#' with your actual .vcf contact file link or action -->
+      <a href="#" class="add-contact-btn">Add Contact</a>
+      
+    </div>
+
+  </main>
+
+</body>
+</html>
