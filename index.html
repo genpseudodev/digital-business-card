@@ -41,21 +41,16 @@
       max-width: 360px; 
     }
 
-    /* Profile Initials/Avatar Placeholder */
+    /* Updated Profile Photo Styles */
     .profile-avatar {
-      width: 110px;
-      height: 110px;
+      width: 120px;
+      height: 120px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #2c2c2c, #111111);
       border: 2px solid #ffffff;
       margin-bottom: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 36px;
-      font-weight: 600;
-      color: #ffffff;
-      letter-spacing: 1px;
+      object-fit: cover; /* Keeps your headshot perfectly proportioned */
+      background-color: #222222;
+      box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
     }
 
     /* Primary Profile Details */
@@ -165,36 +160,32 @@
 </head>
 <body>
 
-  <!-- Full-viewport container layout -->
   <main class="phone-container">
-    
     
     <div class="profile-card">
       
-      <!-- Clean Initials Avatar (Can change to <img src="URL"> later if you have an image link) -->
-      <div class="profile-avatar">GD</div>
+      <!-- Your headshot photo embedded using a direct web link -->
+      <img src="https://squarespace-cdn.com" alt="Genesis Deang" class="profile-avatar">
       
       <h1 class="profile-name">Genesis Deang</h1>
       <p class="profile-title">Sales Coordinator</p>
       <p class="profile-company">Al Huzaifa Furniture</p>
       
-      <!-- Primary Save Action File Callout -->
       <a href="vcard.vcf" class="add-contact-btn">Add Contact</a>
       
-      <!-- Tap to Action Directory Links -->
       <ul class="contact-links-list">
         
         <li>
           <a href="tel:+971588393108" class="contact-item-link">
             <span class="link-label">Mobile</span>
-            <span class="link-value">+971 58 839 3108</span>
+            <span class="link-value">058 839 3108</span>
           </a>
         </li>
 
         <li>
           <a href="https://wa.me" target="_blank" class="contact-item-link">
             <span class="link-label">WhatsApp</span>
-            <span class="link-value">+971 58 839 3108</span>
+            <span class="link-value">058 839 3108</span>
           </a>
         </li>
 
@@ -206,8 +197,7 @@
         </li>
 
         <li>
-          <!-- Verified Live Showroom Location Drop on Google Maps -->
-          <a href="https://maps.app.goo.gl/DULwRN6WKXPS844z7" target="_blank" class="contact-item-link address-layout">
+          <a href="https://goo.gl" target="_blank" class="contact-item-link address-layout">
             <span class="link-label">Address</span>
             <span class="link-value">Zomorrodah Building - Block B, Umm Hurair Rd - near Karama post office - Al Karama - Dubai</span>
           </a>
